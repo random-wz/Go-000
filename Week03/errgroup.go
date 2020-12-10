@@ -55,7 +55,7 @@ func Server(ctx context.Context, addr string, handle http.Handler) error {
 	go func() {
 		select {
 		case <-ctx.Done():
-			fmt.Printf("http server %s done\n", addr)
+			fmt.Printf("http server %s stoped\n", addr)
 			_ = s.Shutdown(ctx)
 		}
 	}()
